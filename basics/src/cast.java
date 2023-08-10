@@ -1,8 +1,8 @@
 public class cast {
     public static void main(String[] args) {
-        // í˜•ë³€í™˜ íƒ€ìž…ìºìŠ¤íŒ… 
-        // ì •ìˆ˜í˜•ì—ì„œ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ 
-        // ì‹¤ìˆ˜í˜•ì—ì„œ ì •ìˆ˜í˜•ìœ¼ë¡œ 
+        // Çüº¯È¯ Å¸ÀÔÄ³½ºÆÃ 
+        // Á¤¼öÇü¿¡¼­ ½Ç¼öÇüÀ¸·Î 
+        // ½Ç¼öÇü¿¡¼­ Á¤¼öÇüÀ¸·Î 
 
         int score = 90;
         System.out.println(score); // 93
@@ -12,17 +12,42 @@ public class cast {
         float score_f = 93.3F;
         double score_d = 98.8;
 
-        //ì†Œìˆ˜ì  ì´í•˜ ë‹¤ ë²„ë¦¼. 
+        //¼Ò¼öÁ¡ ÀÌÇÏ ´Ù ¹ö¸². 
         System.out.println((int) score_f); // 93
         System.out.println((int) score_d); // 98
 
-        // ì •ìˆ˜ + ì‹¤ìˆ˜ ì—°ì‚°
+        // Á¤¼ö + ½Ç¼ö ¿¬»ê
         int add = 93 + (int)98.8;
         System.out.println(add); // 191 
 
         score_d = (double)93 + 98.8; // 93.0 + 98.8
         System.out.println(score_d);
 
-        
+        // º¯¼ö¿¡ Çüº¯È¯µÈ µ¥ÀÌÅÍ Áý¾î³Ö±â
+        // 1. ´õ Å« µ¥ÀÌÅÍ -> ÀÛÀº µ¥ÀÌÅÍ 
+        double donvertedScoreDouble = score; // 191 -> 191.0
+        // int -> long -> float -> double
+
+        // 2. ´õ ÀÛÀº µ¥ÀÌÅÍ -> Å« µ¥ÀÌÅÍ
+        int convertedScoreInt = (int) score_d; // 191.8 -> 191
+
+        // ¼ýÀÚ¸¦ ¹®ÀÚ¿­·Î (String/Integer Å¬·¡½º ÀÌ¿ë)
+        String s1 = String.valueOf(93); // ¹æ¹ý 1
+        s1 = Integer.toString(93); // ¹æ¹ý 2
+        System.out.println(s1); //93
+
+        String s2 = String.valueOf(98.8);
+        s2 = Double.toString(98.8);
+        System.out.println(s2); //98.8
+
+        // ¹®ÀÚ¿­À» ¼ýÀÚ·Î 
+        int i = Integer.parseInt("93");
+        System.out.println(i); // 93
+
+        double d = Double.parseDouble("98.8");
+        System.out.println(d); // 98.8
+
+        // ¿À·ù ¿¹Á¦
+        // int error = Integer.parseInt("ÀÚ¹Ù");
     }
 }
