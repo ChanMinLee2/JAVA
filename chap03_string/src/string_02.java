@@ -19,6 +19,5 @@ public class string_02 {
         System.out.println(s1 + "," + s2); // Java,Python
         System.out.println(s1.concat(",").concat(s2)); // Java,Python
 
-
     }
 }
